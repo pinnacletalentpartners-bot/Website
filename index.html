@@ -230,7 +230,16 @@
 <a href="https://wa.me/919310430856" target="_blank" class="whatsapp-pill" aria-label="Chat on WhatsApp">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+  });
+</script>
 
 </body>
 </html>
+
 
