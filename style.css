@@ -463,3 +463,107 @@ nav a.active {
 .section p {
   margin-bottom: 20px;
 }
+
+/* ================= MOBILE RESPONSIVE FIX ================= */
+@media (max-width: 768px) {
+
+  /* Container padding */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* HEADER */
+  .nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav nav a {
+    font-size: 14px;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero a {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* SECTION TITLES */
+  .section-title {
+    font-size: 24px;
+  }
+
+  /* CARDS */
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 15px;
+  }
+
+  /* CTA */
+  .cta {
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .cta-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cta a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  /* WHATSAPP BUTTON */
+  .whatsapp-pill {
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
