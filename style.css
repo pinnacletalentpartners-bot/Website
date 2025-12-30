@@ -398,6 +398,123 @@ nav a.active {
     gap: 8px;
     text-align: center;
   }
+
+/* ================= FORM PAGE ENHANCEMENTS ================= */
+/* Grid layout for larger screens */
+.card form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 18px;
+  align-items: start;
+}
+
+/* Make full-width fields span both columns */
+.card form textarea,
+.card form input[type="file"],
+.card form #message,
+.card form #resume,
+.card form label[for="resume"],
+.card form #voicePlayback,
+.card form .btn-primary,
+.card form p,
+.card form #recStatus,
+.card form #referFields {
+  grid-column: 1 / -1;
+}
+
+/* Labels & small helper text */
+.card form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.card form input[type="text"],
+.card form input[type="email"],
+.card form input[type="tel"],
+.card form input[type="number"],
+.card form select,
+.card form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  background: #ffffff;
+}
+
+.card form input[type="file"] {
+  padding: 8px 6px;
+}
+
+.card form input:focus,
+.card form select:focus,
+.card form textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.08);
+}
+
+/* Recorder controls */
+#startRec, #stopRec {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(15,23,42,0.08);
+  background: #f8fafc;
+  color: #0f172a;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#startRec[disabled], #stopRec[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+#voicePlayback {
+  width: 100%;
+  margin-top: 6px;
+}
+
+#recStatus {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Referral nested block */
+#referFields {
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px dashed #e6eef6;
+}
+
+/* Primary button styling inside form */
+.card form .btn-primary {
+  padding: 12px 26px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+/* Small helper notes */
+.small-muted {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Make form single-column on narrow screens */
+@media (max-width: 720px) {
+  .card form {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1,
+  .inner-hero h1 {
+    font-size: 26px;
+  }
+}
+
 }
 
 .footer-bottom {
@@ -464,164 +581,132 @@ nav a.active {
   margin-bottom: 20px;
 }
 
-/* ================= MOBILE RESPONSIVE FIX ================= */
-@media (max-width: 768px) {
+/* ================= BEAUTIFUL FORM ================= */
 
-  /* Container padding */
-  .container {
-    padding: 0 16px;
-  }
-
-  /* HEADER */
-  .nav {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .nav nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .nav nav a {
-    font-size: 14px;
-  }
-
-  /* HERO SECTION */
-  .hero {
-    padding: 60px 0;
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-    line-height: 1.3;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .hero a {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  /* SECTION TITLES */
-  .section-title {
-    font-size: 24px;
-  }
-
-  /* CARDS */
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    padding: 20px;
-  }
-
-  .card h3 {
-    font-size: 18px;
-  }
-
-  .card p {
-    font-size: 15px;
-  }
-
-  /* CTA */
-  .cta {
-    text-align: center;
-    padding: 40px 0;
-  }
-
-  .cta-flex {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .cta a {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* FOOTER */
-  .footer-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  /* WHATSAPP BUTTON */
-  .whatsapp-pill {
-    right: 15px;
-    bottom: 15px;
-  }
+.resume-form {
+  padding: 30px;
 }
 
-/* ================= MOBILE MENU FIX ================= */
+.form-group {
+  margin-bottom: 18px;
+}
 
-/* Desktop navigation */
-.nav-links {
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-group small {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.rec-box {
   display: flex;
-  gap: 18px;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-/* Hamburger hidden on desktop */
-.menu-toggle {
+.rec-box audio {
+  max-width: 100%;
+}
+
+.refer-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.refer-fields {
   display: none;
-  background: none;
-  border: none;
-  font-size: 22px;
+  padding-left: 12px;
+  border-left: 2px solid #e5e7eb;
+  margin-bottom: 16px;
+}
+
+.privacy-note {
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.form-submit {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-feedback {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+.refer-box label {
+  margin: 0;
+  font-size: 14px;
+}
+.refer-box {
+  display: inline-flex;          /* shrink to content */
+  align-items: center;           /* vertical align */
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+  white-space: nowrap;           /* 🔑 FORCE SINGLE LINE */
+}
+
+.refer-box input {
+  margin: 0;
+}
+
+.refer-box label {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1;
   cursor: pointer;
 }
 
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
+/* ================= FORM GRID ================= */
 
-  /* Show hamburger */
-  .menu-toggle {
-    display: block;
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .form-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  /* Hide menu by default on mobile */
-  .nav-links {
-    display: none;              /* 🔴 THIS WAS MISSING */
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #ffffff;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 20px 0;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    z-index: 999;
-  }
-
-  /* Show menu when toggled */
-  .nav-links.show {
-    display: flex;
-  }
-
-  /* Header layout */
-  .nav {
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-links a {
-    font-size: 16px;
+/* Mobile */
+@media (max-width: 767px) {
+  .form-grid-3 {
+    grid-template-columns: 1fr;
   }
 }
 

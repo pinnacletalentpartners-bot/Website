@@ -2,38 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://69516d98ca75146bde24b652--fastidious-hamster-7de7e2.netlify.app/</loc>
+    <loc>https://pinnacletalent.co.in/</loc>
     <priority>1.0</priority>
+    <lastmod>2025-12-30</lastmod>
   </url>
 
   <url>
-    <loc>https://69516d98ca75146bde24b652--fastidious-hamster-7de7e2.netlify.app/about.html</loc>
+    <loc>https://pinnacletalent.co.in/about.html</loc>
     <priority>0.8</priority>
+    <lastmod>2025-12-30</lastmod>
   </url>
 
   <url>
-    <loc>https://69516d98ca75146bde24b652--fastidious-hamster-7de7e2.netlify.app/services.html</loc>
+    <loc>https://pinnacletalent.co.in/services.html</loc>
     <priority>0.8</priority>
+    <lastmod>2025-12-30</lastmod>
   </url>
 
   <url>
-    <loc>https://69516d98ca75146bde24b652--fastidious-hamster-7de7e2.netlify.app/industries.html</loc>
+    <loc>https://pinnacletalent.co.in/industries.html</loc>
     <priority>0.8</priority>
+    <lastmod>2025-12-30</lastmod>
   </url>
 
   <url>
-    <loc>https://69516d98ca75146bde24b652--fastidious-hamster-7de7e2.netlify.app/careers.html</loc>
+    <loc>https://pinnacletalent.co.in/careers.html</loc>
     <priority>0.7</priority>
+    <lastmod>2025-12-30</lastmod>
   </url>
 
   <url>
-    <loc>https://69516d98ca75146bde24b652--fastidious-hamster-7de7e2.netlify.app/employers.html</loc>
+    <loc>https://pinnacletalent.co.in/employers.html</loc>
     <priority>0.8</priority>
+    <lastmod>2025-12-30</lastmod>
   </url>
 
   <url>
-    <loc>https://69516d98ca75146bde24b652--fastidious-hamster-7de7e2.netlify.app/contact.html</loc>
+    <loc>https://pinnacletalent.co.in/contact.html</loc>
     <priority>0.6</priority>
+    <lastmod>2025-12-30</lastmod>
+  </url>
+
+  <url>
+    <loc>https://pinnacletalent.co.in/privacy-policy.html</loc>
+    <priority>0.3</priority>
+    <lastmod>2025-12-30</lastmod>
+  </url>
+
+  <url>
+    <loc>https://pinnacletalent.co.in/blog-bpo-hiring.html</loc>
+    <priority>0.5</priority>
+    <lastmod>2025-12-30</lastmod>
   </url>
 
 </urlset>
