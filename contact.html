@@ -107,25 +107,6 @@
   </div>
 </section>
 
-  <!-- ================= GOOGLE MAP ================= -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">Our Location</h2>
-
-    <div class="map-container">
-      <iframe
-        src="https://www.google.com/maps?q=Janakpuri%20East%2C%20New%20Delhi&output=embed"
-        width="100%"
-        height="350"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </div>
-</section>
-
 <!-- ================= CONTACT FORM ================= -->
 <section class="section">
   <div class="container">
@@ -150,10 +131,11 @@
     </div>
 
     <!-- FORM -->
-   <form action="https://formspree.io/f/xykyvajy"
-      method="POST"
-      class="contact-form">
-
+    <form name="contact"
+          method="POST"
+          data-netlify="true"
+          
+          class="contact-form">
 
       <input type="hidden" name="form-name" value="contact">
 
@@ -226,6 +208,13 @@
   </div>
 </footer>
 
+<!-- ================= WHATSAPP ICON ================= -->
+<a href="https://wa.me/919310430856"
+   target="_blank"
+   class="whatsapp-pill"
+   aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 <!-- ================= SUCCESS SCRIPT ================= -->
 <script>
@@ -235,17 +224,8 @@
     document.querySelector(".contact-form").style.display = "none";
   }
 </script>
-<!-- ================= WHATSAPP CHAT ================= -->
-<a href="https://wa.me/919310430856?text=Hi%20Pinnacle%20Talent%20Partners,%20I%20have%20an%20enquiry."
-   target="_blank"
-   class="whatsapp-chat"
-   aria-label="Chat on WhatsApp">
-  <i class="fa-brands fa-whatsapp"></i>
-  <span>Chat with us</span>
-</a>
 
 </body>
 </html>
-
-
-
+where should I insert form spree link
+Can you add it for me 
