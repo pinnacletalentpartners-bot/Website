@@ -11,7 +11,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -19,7 +20,36 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+  <!-- SEO: Canonical, Open Graph, Twitter Card, Organization JSON-LD -->
   <link rel="canonical" href="https://pinnacletalent.co.in/contact.html" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact — Pinnacle Talent Partners" />
+  <meta property="og:description" content="Contact Pinnacle Talent Partners for BPO and EdTech recruitment support. Get in touch for hiring or career enquiries." />
+  <meta property="og:url" content="https://pinnacletalent.co.in/contact.html" />
+  <meta property="og:site_name" content="Pinnacle Talent Partners" />
+  <meta property="og:image" content="https://pinnacletalent.co.in/assets/og.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact — Pinnacle Talent Partners" />
+  <meta name="twitter:description" content="Contact Pinnacle Talent Partners for BPO and EdTech recruitment support. Get in touch for hiring or career enquiries." />
+  <meta name="twitter:image" content="https://pinnacletalent.co.in/assets/og.svg" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Pinnacle Talent Partners",
+    "url":"https://pinnacletalent.co.in",
+    "logo":"https://pinnacletalent.co.in/assets/logo.svg",
+    "contactPoint":[{
+      "@type":"ContactPoint",
+      "telephone":"+91 9310430856",
+      "contactType":"customer service",
+      "email":"connect@pinnacletalent.co.in",
+      "areaServed":"IN"
+    }]
+  }
+  </script>
 </head>
 <body>
 
@@ -39,11 +69,14 @@
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- ================= BLUE HERO ================= -->
 <section class="inner-hero">
   <div class="container">
     <h1>Contact Us</h1>
-    <p>Let’s discuss your hiring needs or career enquiries.</p>
+    <p>
+      Let’s discuss your hiring needs or help you
+      find the right career opportunity.
+    </p>
   </div>
 </section>
 
@@ -56,7 +89,7 @@
       <div class="card">
         <i class="fa-solid fa-phone icon"></i>
         <h3>Phone</h3>
-        <p>+91 93104 30856</p>
+        <p>9310430856</p>
       </div>
 
       <div class="card">
@@ -74,7 +107,7 @@
   </div>
 </section>
 
-<!-- ================= GOOGLE MAP ================= -->
+  <!-- ================= GOOGLE MAP ================= -->
 <section class="section">
   <div class="container">
     <h2 class="section-title">Our Location</h2>
@@ -85,8 +118,9 @@
         width="100%"
         height="350"
         style="border:0;"
-        allowfullscreen
-        loading="lazy">
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
   </div>
@@ -94,38 +128,54 @@
 
 <!-- ================= CONTACT FORM ================= -->
 <section class="section">
-  <div class="container" style="max-width:700px;">
+  <div class="container">
     <h2 class="section-title">Send Us a Message</h2>
 
-    <p style="text-align:center;margin-bottom:16px;">
-      For urgent hiring,  
-      <a href="https://wa.me/919310430856" target="_blank" style="color:#25D366;font-weight:600;">
-        chat on WhatsApp
-      </a>
-    </p>
+    <p style="text-align:center; margin-bottom:20px;">
+  For urgent hiring requirements,
+  <a href="https://wa.me/919310430856" target="_blank" style="color:#22c55e; font-weight:600;">
+    contact us on WhatsApp
+  </a>.
+</p>
 
-    <form action="https://formspree.io/f/xykyvajy" method="POST" class="contact-form">
 
-      <input type="hidden" name="_subject" value="New Contact Enquiry - Pinnacle Talent Partners">
+    <!-- SUCCESS MESSAGE -->
+    <div id="success-message" class="success-message">
+      <i class="fa-solid fa-circle-check"></i>
+      <h3>Thank you!</h3>
+      <p>
+        Your message has been submitted successfully.
+        Our team will contact you shortly.
+      </p>
+    </div>
+
+    <!-- FORM -->
+   <form action="https://formspree.io/f/xykyvajy"
+      method="POST"
+      class="contact-form">
+
+
+      <input type="hidden" name="form-name" value="contact">
 
       <div class="form-group">
-        <label>Your Name *</label>
-        <input type="text" name="name" required>
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="Enter your full name" required>
       </div>
 
       <div class="form-group">
-        <label>Email *</label>
-        <input type="email" name="email" required>
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
       </div>
 
       <div class="form-group">
-        <label>Phone</label>
-        <input type="tel" name="phone">
+        <label>Phone Number</label>
+        <input type="tel" name="phone" placeholder="Enter your phone number">
       </div>
 
       <div class="form-group">
-        <label>Enquiry Type</label>
-        <select name="enquiry">
+        <label>Type of Enquiry</label>
+        <select name="enquiry_type" required>
+          <option value="">Select enquiry type</option>
           <option>Hiring Requirement</option>
           <option>Job Seeker</option>
           <option>General Enquiry</option>
@@ -134,14 +184,23 @@
 
       <div class="form-group">
         <label>Your Message</label>
-        <textarea name="message" rows="4"></textarea>
+        <textarea name="message" rows="4" placeholder="Write your message here"></textarea>
       </div>
 
       <button type="submit" class="btn-primary form-btn">
         Send Message
       </button>
-
     </form>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta">
+  <div class="container cta-flex">
+    <h2>Prefer a quick conversation?</h2>
+    <div>
+      <a href="https://wa.me/919310430856" class="btn-primary">Chat on WhatsApp</a>
+    </div>
   </div>
 </section>
 
@@ -150,11 +209,14 @@
   <div class="container footer-grid">
     <div>
       <h3>Pinnacle Talent Partners</h3>
-      <p>BPO & EdTech recruitment specialists.</p>
+      <p>
+        Recruitment specialists in BPO & EdTech,
+        delivering quality talent with speed and integrity.
+      </p>
     </div>
 
     <div>
-      <p>📞 +91 93104 30856</p>
+      <p>📞 9310430856</p>
       <p>✉ connect@pinnacletalent.co.in</p>
     </div>
   </div>
@@ -164,6 +226,22 @@
   </div>
 </footer>
 
+<!-- ================= WHATSAPP ICON ================= -->
+<a href="https://wa.me/919310430856"
+   target="_blank"
+   class="whatsapp-pill"
+   aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- ================= SUCCESS SCRIPT ================= -->
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("success") === "true") {
+    document.getElementById("success-message").style.display = "block";
+    document.querySelector(".contact-form").style.display = "none";
+  }
+</script>
 <!-- ================= WHATSAPP CHAT ================= -->
 <a href="https://wa.me/919310430856?text=Hi%20Pinnacle%20Talent%20Partners,%20I%20have%20an%20enquiry."
    target="_blank"
@@ -175,3 +253,5 @@
 
 </body>
 </html>
+
+chat box not working
